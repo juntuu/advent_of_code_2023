@@ -54,9 +54,11 @@ G; s/ *\([IX]* [IX]*\)\n\([IX]*\) *\([IX]*\)/\2\1\3/; h
 
 # At the end, decode the unary back to base 10.
 $ {
+	s/ *$/ /
 	s/X/IIIIIIIIII/g
 	:loop
 	s/IIIIIIIIII/X/g
+	s/X\([0-9]* \)/X0\1/g
 	s/IIIIIIIII/9/g
 	s/IIIIIIII/8/g
 	s/IIIIIII/7/g
