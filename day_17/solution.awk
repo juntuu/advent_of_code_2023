@@ -1,7 +1,6 @@
 #!/usr/bin/awk -f
 
-function P(u,s,h){Y=y;X=x;C=i;do C+=c=substr(G[Y+=u],X+=s,0>-X)
-while(++h*2<o);h<o+4&&(--C<B[k=Y"  "X-1" "u-1" "s" "h,o])+!B[k,
-o]&&c&&Q[C]=k" "Q[B[k,o]=C]}W=NR"  "length-1{G[NR]=$0}END{for(;
-Q[j=0]=8>o;)if(($0=Q[i++])~W){print--i;delete Q;i=o--;o+=8}else
-while(y=$++j){x=$++j+1;P(v=$++j+1,h=$++j,$++j)P(h,-v,P(-h,v))}}
+function P(u,s,h){Y=y;X=x;C=i;do C+=c=substr(G[Y+=s],X+=u,X>0);while(++h*2<o)
+h<o+4&&C-Q[k=Y"  "X" "u" "s" "h]~"-|"C&&c&&Q[C]=k" "Q[Q[k]=C]}W=NR"  "length{
+G[NR]=$0}END{while(8>o)if(j=($0=i++?Q[i]:"1 1 0 1 0 1 1 1")~W){print--i;i=o--
+o+=8;delete Q}else for(;y=$++j;P(v=$++j,h=+$++j,$++j)P(h,P(-h-p,v)-v))x=$++j}
