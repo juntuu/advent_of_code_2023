@@ -70,5 +70,6 @@ $ {
 	s/I/1/g
 	s/X/I/g
 	t loop
+	s/ *$//
 	s/ /\n/p
 }
